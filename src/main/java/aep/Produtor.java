@@ -6,12 +6,14 @@ import java.util.Scanner;
 
 public class Produtor {
 	private String nome;
+	private int cpf;
 	private List<Propriedade> propriedades = new ArrayList<>();
 	private List<Boi> gado = new ArrayList<>();
 	private List<Racao> racao = new ArrayList<>();
 	
-	public Produtor(String nome) {
+	public Produtor(String nome, int cpf) {
 		this.nome = nome;
+		this.cpf = cpf;
 	}
 	
 	public void addPropriedade(Propriedade novo) {

@@ -37,7 +37,7 @@ public class AppAEP {
 	
 	public static void main(String[] args) {
 		
-		Produtor produtor = new Produtor("Kauan");
+		Produtor produtor = new Produtor("Kauan",0000000);
 		int escolha = 0;
 		boolean run = true;
 		Scanner input = new Scanner(System.in); 
