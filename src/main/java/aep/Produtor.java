@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Produtor {
 	private String nome;
 	private int cpf;
+	private BalancaBoi balancaBoi = new BalancaBoi();
 	private List<Propriedade> propriedades = new ArrayList<>();
 	private List<Boi> gado = new ArrayList<>();
 	private List<Racao> racao = new ArrayList<>();
@@ -60,6 +61,28 @@ public class Produtor {
 				escolha = input.nextInt();
 				String novo = propriedades.get(escolha-1).getNome();
 				this.gado.get(i).setPropriedade(new Propriedade(novo));
+			}
+		}
+	}
+	
+	public void pesarBoi(int codigoBoi) {
+		for (int i = 0; i < this.gado.size(); i++) {
+			if (this.gado.get(i).getCod() == codigoBoi) {
+				System.out.println("Pesando boi ...");
+				int pesoFinal = balancaBoi.pesarBoi();
+				System.out.println("Boi pesado com sucesso !");
+				this.gado.get(i).setPesoKg(pesoFinal);
+			}
+		}
+	}
+	
+	public void mostrarPesoBoi(int codigoBoi) {
+		for (int i = 0; i < this.gado.size(); i++) {
+			if (this.gado.get(i).getCod() == codigoBoi) {
+				System.out.println("O boi está pesando: " + this.gado.get(i).getPesoKg());
+			}
+			else {
+				System.out.println("Não existe um boi com esse código");
 			}
 		}
 	}

@@ -18,6 +18,8 @@ public class AppAEP {
 		System.out.println("1 - Adicionar Gado");
 		System.out.println("2 - Excluir Gado");
 		System.out.println("3 - Mover Gado");
+		System.out.println("4 - Pesar Boi");
+		System.out.println("5 - Mostrar Peso Boi");
 	}
 	
 	public static void manterRacao() {
@@ -80,6 +82,20 @@ public class AppAEP {
 					System.out.println("Qual o código do boi que deseja mover ?");
 					int cod = input.nextInt();
 					produtor.moverBoi(cod);
+					break;
+				}
+				
+				else if (escolha == 4) { // PESAR BOI
+					System.out.println("Qual o código do boi que deseja pesar ?");
+					int cod = input.nextInt();
+					produtor.pesarBoi(cod);
+					break;
+				}
+				
+				else if (escolha == 5) { // MOSTRAR BOI
+					System.out.println("Qual o código do boi que deseja mostrar ?");
+					int cod = input.nextInt();
+					produtor.mostrarPesoBoi(cod);
 					break;
 				}
 				
